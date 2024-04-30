@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
-<link rel="stylesheet" href="/resources/style/form-login.css">
+<link rel="stylesheet" href="/resources/style/form.css">
 <script src="/resources/script/validation-join.js"></script>
 </head>
 <c:import url="/header" />
@@ -14,18 +14,21 @@
 	<c:if test="${not empty user }">
 		<c:redirect url="/mypage"></c:redirect>
 	</c:if>
-<h2>로그인</h2>
-	<form method="POST" action="/loginForm">
-		<div>
-			<input type="text" id="id" name="id" placeholder="아이디">
-			<input type="password" id="password" name="password" placeholder="비밀번호">
-		</div>
-		<div class="error-container">
-			<p class="error-msg" id="error-msg-id">* 아이디: 필수 정보입니다.</p>
-			<p class="error-msg" id="error-msg-password">* 비밀번호: 필수 정보입니다.</p>
-		</div>
-		<input type="submit" value="회원가입">
-	</form>
+	
+	<section id="root">
+		<h2>로그인</h2>
+		<form method="POST" action="/loginForm">
+			<div>
+				<input type="text" id="id" name="id" placeholder="아이디">
+				<input type="password" id="password" name="password" placeholder="비밀번호">
+			</div>
+			<div class="error-container">
+				<p class="error-msg" id="error-msg-id">* 아이디: 필수 정보입니다.</p>
+				<p class="error-msg" id="error-msg-password">* 비밀번호: 필수 정보입니다.</p>
+			</div>
+			<input type="submit" value="로그인">
+		</form>
+	</section>
 </body>
 <c:import url="/footer" />
 </html>
