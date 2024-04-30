@@ -15,13 +15,13 @@ form select
 
 form input[type="text"], 
 form input[type="password"],
-form > div:nth-last-child(2)
+#agree-container
 {
 	width: 400px;
 	padding: 12px;
 }
 
-form > div:nth-last-child(2)
+#agree-container
 {
 	border-radius: 10px;
 	border: solid 1px lightgrey;
@@ -147,8 +147,4 @@ label:last-child > div {
 #agree-label > p > b {
 	color: #5356FF;
 	font-weight: bold;
-}
-
-input[type="checkbox"]:checked ~ #agree-label{
-	color :  #5356FF;
 }
