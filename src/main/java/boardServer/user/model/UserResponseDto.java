@@ -1,4 +1,4 @@
-package borderServer.user;
+package boardServer.user.model;
 
 public class UserResponseDto {
 	private String id;

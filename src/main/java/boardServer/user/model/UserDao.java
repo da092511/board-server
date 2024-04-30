@@ -1,4 +1,4 @@
-package borderServer.user;
+package boardServer.user.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
