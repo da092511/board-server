@@ -7,9 +7,13 @@
 <jsp:include page="/header"></jsp:include>
 <script src="/resources/script/validation-join.js"></script>
 <body>
+	<c:if test="${not empty user }">
+		<c:redirect url="/mypage"></c:redirect>
+	</c:if>
+
 	<section id="root">
 		<h2>회원가입</h2>
-		<form method="POST" action="/joinPro">
+		<form method="POST" action="/joinForm">
 			<div>
 				<input type="text" id="id" name="id" placeholder="아이디">
 				<input type="password" id="password" name="password" placeholder="비밀번호">
