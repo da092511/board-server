@@ -1,0 +1,15 @@
+.settings
+.classpath
+.project
+build/
+.DS_Store
+
+tree -a
+cat.gitignore
+
+.settings
+.classpath
+.project
+build/
+src/main/webapp/WEB-INF/lib/
+.DS_Store
