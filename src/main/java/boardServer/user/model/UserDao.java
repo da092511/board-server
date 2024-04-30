@@ -9,6 +9,8 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+import boardServer.user.controller.util.PasswordCrypto;
+
 public class UserDao {
 
 	private Connection conn;
@@ -82,6 +84,10 @@ public class UserDao {
 	
 	public UserResponseDto findUserByIdAndPassword(String id, String password) {
 		UserResponseDto user = null;
+		//데이터베이스에 있는 암호화된 패스워드 str를 얻어와
+		//PasswordCrypto.decrypt(str)를 통해
+		//일치여부 확인 후 
+		//return
 		
 		try {
 			// 쿼리할 준비
@@ -127,7 +133,7 @@ public class UserDao {
 			
 			// sql 구문에 맵핑할 값 설정
 			pstmt.setString(1, userDto.getId());
-			pstmt.setString(2, userDto.getPassword());
+			pstmt.setString(2, PasswordCrypto.encrypt(userDto.getPassword()));
 			
 			String email = userDto.getEmail().equals("") ? null : userDto.getEmail();
 			pstmt.setString(3, email);
